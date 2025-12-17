@@ -1,0 +1,40 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* The Container for the 20x20 Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(20, 25px); /* 20 columns, 25px wide */
+  gap: 1px;
+  background-color: #ccc; /* Border color between cells */
+  margin: 0 auto;
+  width: fit-content;
+  border: 5px solid #333;
+}
+
+/* Individual Cell */
+.node {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Smooth animation */
+}
+
+/* Colors for different states */
+.node-start { background-color: green; }
+.node-end { background-color: red; }
+.node-wall { background-color: #333; }
+.node-visited { background-color: rgba(0, 190, 218, 0.75); }
+.node-path { background-color: yellow; }
